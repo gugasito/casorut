@@ -14,34 +14,22 @@ class MainTest {
     }
 
     @Test
-    void main() {
+    void testOperaciones() {
+        assertEquals(ValidadorRut.operaciones(138),5);
     }
 
     @Test
-    void digito() {
+    void testSerie() {
+        assertEquals(ValidadorRut.serie("87654321"),138);
     }
 
     @Test
-    void serie() {
+    void testVoltearInt() {
+        assertEquals(ValidadorRut.voltearInt(12345678),"87654321");
     }
 
     @Test
-    void ingresarut() {
-    }
-
-    @Test
-    void dVerificador() {
-    }
-
-    @Test
-    void operaciones() {
-    }
-
-    @Test
-    void menu() {
-    }
-
-    @Test
-    void voltearInt() {
+    void testDigito() {
+        assertEquals(ValidadorRut.digito(11),"0");
     }
 }
